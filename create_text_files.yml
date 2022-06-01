@@ -1,9 +1,12 @@
 ---
 - name: create 2 text files
   hosts: localhost
-
-  tasks:
-  - name: create file
+  
+  - name: create two txt files
     file:
-      src: "Documents/file1.txt"
+      path: '{{ item.name }}'
       state: touch
+
+    loop:
+      - {name: '~/Documents/file1.txt'}
+      - {name: '~/Documents/file2.txt'}

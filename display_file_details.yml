@@ -1,0 +1,13 @@
+---
+- name: read 2 text files
+  hosts: localhost
+
+  tasks:
+
+  - name: ping local ansible system
+    ping:
+
+  - name: read two txt files
+    find:
+      path: '~/Downloads'
+      file_type: file
