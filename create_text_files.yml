@@ -1,0 +1,9 @@
+---
+- name: create 2 text files
+  hosts: localhost
+
+  tasks:
+  - name: create file
+    file:
+      src: "Documents/file1.txt"
+      state: touch
